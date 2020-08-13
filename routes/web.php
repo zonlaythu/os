@@ -16,5 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'BackendController@dashboard')->name('dashboard');
 Route::resource('items', 'ItemController');
 Route::resource('brands', 'BrandController');
+Route::resource('categories','CategoryController');
+Route::resource('subcategories','SubcategoryController');
+
 
 // get-4/post-1/put-1/delet-1

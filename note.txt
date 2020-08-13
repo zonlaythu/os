@@ -12,3 +12,16 @@ Items Mange
 	-data insert
 	-redirect->(index)
 -show database
+
+-create resource brandsroute
+-create controller (--resource)
+-create blades(4)
+-call specified view from method
+-use store method(from action)
+	-dd()
+	-validation
+	-if include image,uploade
+	-data insert
+	-data save()
+	-redirect->index
+-show database
