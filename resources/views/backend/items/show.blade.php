@@ -34,11 +34,27 @@
 
 
 						<div class="col-md-6">
-							<p class="card-text"><small class="text-muted">Product Discount:</small></p>
+							<p class="card-text"><small class="text-muted">Description:</small></p>
 						</div>
 						<div class="col-md-6">
 							
-							{{$item->discount}}
+							{{$item->description}}
+						</div>
+
+						<div class="col-md-6">
+							<p class="card-text"><small class="text-muted">Brand:</small></p>
+						</div>
+						<div class="col-md-6">
+							
+							{{$item->brand->name}}
+						</div>
+
+						<div class="col-md-6">
+							<p class="card-text"><small class="text-muted">Subcategory:</small></p>
+						</div>
+						<div class="col-md-6">
+							
+							{{$item->subcategory->name}}
 						</div>
 						</div>
 					</div>

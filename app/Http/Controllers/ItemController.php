@@ -1,13 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\Item;
 use App\Brand;
 use App\Subcategory;
 class ItemController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -40,7 +40,8 @@ class ItemController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+    {   
+       
         $request->validate([
             'codeno'=>'required|min:4',
             'name'=>'required',
@@ -136,8 +137,8 @@ class ItemController extends Controller
                 $request->photo->move(public_path('backend/itemimg'),$imageName);
                 $myfile='backend/itemimg/'.$imageName;
             // delete old photo(unlink) 
-                // if(File::exits('$imageName'))
-                // unlink($imageName);
+                $old=$request->oldphoto;
+                unlink($old);
             }else{
                 $myfile=$request->oldphoto;
             }

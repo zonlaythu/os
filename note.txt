@@ -25,3 +25,18 @@ Items Mange
 	-data save()
 	-redirect->index
 -show database
+
+13/8/2020
+--------
+-List,Edit,Update,Delete for brand
+-Validation Error
+-Delete image if uploaded new image(unlink)
+
+-UI
+---
+-filter item page
+-item detail page
+-checkout page
+-profile page
+-register page
+-login page
