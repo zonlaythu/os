@@ -14,7 +14,8 @@ class OrderController extends Controller
      */
     public function index()
     {
-        //
+        $orders=Order::All();
+        return view('backend.orders.index',compact('orders'));
     }
 
     /**
@@ -68,7 +69,7 @@ class OrderController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**

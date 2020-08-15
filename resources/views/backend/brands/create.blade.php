@@ -7,7 +7,8 @@
 		<div class="offset-md-2 col-md-8">
 			<form enctype="multipart/form-data" method="POST" action="{{route('brands.store')}}">
 				@csrf
-
+				{{-- @method('PUT') --}}
+				
 				<div class="form-group">
 					<label>Name</label>
 					<input type="text" name="name" class="form-control">

@@ -40,3 +40,19 @@ Items Mange
 -profile page
 -register page
 -login page
+
+14/8/20
+--------
+Frontend
+-filter item page(data binding)
+-profile page(link/retrieve)
+-auth(multi role)
+
+Backend
+-Order Retrieve
+-(backend/orders)
+-create view(index.blade.php)
+-show table(order list)
+-OrderController /index
+
+-RUD(category and subcategory)

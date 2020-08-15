@@ -4,12 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Item;
+// use App\User;
 class FrontendController extends Controller
 {
    public function home()
    {
-   	$items=Item::orderBy('id','desc')
-   				->take(6)->get();	
+   	$items=Item::orderBy('id','desc')->take(6)->get();
    	// dd($items);
    	 return view('frontend.home',compact('items'));
 
@@ -17,8 +17,7 @@ class FrontendController extends Controller
 
     public function item()
    {
-   	$items=Item::orderBy('id','desc')
-   				->take(6)->get();	
+   	$items=Item::all();
    	 return view('frontend.items',compact('items'));
 
    }
@@ -61,7 +60,7 @@ class FrontendController extends Controller
 
     public function profile()
    {
-   	
+    
    	 return view('frontend.profile');
    }
 }

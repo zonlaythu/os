@@ -3,7 +3,7 @@
 <div class="container">
 	<h2>Item Edit(Table))</h2>
 
-	@if ($errors->any())
+	{{-- @if ($errors->any())
 	<div class="alert alert-danger">
 		<ul>
 			@foreach ($errors->all() as $error)
@@ -11,7 +11,7 @@
 			@endforeach
 		</ul>
 	</div>
-	@endif
+	@endif --}}
 
 	<div class="row">
 		<div class="offset-md-2 col-md-8">
@@ -26,6 +26,9 @@
 				<div class="form-group">
 					<label>Name</label>
 					<input type="text" name="name" class="form-control" value="{{$item->name}}">
+					@error('name')
+					<p class="text-danger">Your Name is required!</p>
+					@enderror
 				</div>
 
 				<div class="form-group">
@@ -33,6 +36,9 @@
 					<input type="file" name="photo" class="form-control-file">
 					<img src="{{asset($item->photo)}}" class="img-fluid w-25 h-25">
 					<input type="hidden" name="oldphoto" value="{{$item->photo}}">
+					@error('photo')
+					<p class="text-danger">Your Photo is required!</p>
+					@enderror
 				</div>
 
 				<div class="form-group">

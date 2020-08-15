@@ -3,7 +3,7 @@
 <div class="container">
 	<h2>Brand Edit(Your UI))</h2>
 
-	@if ($errors->any())
+	{{-- @if ($errors->any())
 	<div class="alert alert-danger">
 		<ul>
 			@foreach ($errors->all() as $error)
@@ -11,7 +11,7 @@
 			@endforeach
 		</ul>
 	</div>
-	@endif
+	@endif --}}
 
 	<div class="row">
 		<div class="offset-md-2 col-md-8">

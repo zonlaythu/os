@@ -3,16 +3,6 @@
 <div class="container">
 	<h2>Item Create(Table))</h2>
 
-	{{-- @if ($errors->any())
-	<div class="alert alert-danger">
-		<ul>
-			@foreach ($errors->all() as $error)
-			<li>{{ $error }}</li>
-			@endforeach
-		</ul>
-	</div>
-	@endif --}}
-
 	<div class="row">
 		<div class="offset-md-2 col-md-8">
 			<form enctype="multipart/form-data" method="POST" action="{{route('items.store')}}">
@@ -67,7 +57,7 @@
 
 				<div class="form-group">
 					<label>Brand</label>
-					<select name="brand" class="form-control">						
+					<select name="brand" class="form-control">				
 						@foreach($brands as $brand)
 						<option value="{{$brand->id}}">{{$brand->name}}</option>
 						@endforeach

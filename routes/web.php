@@ -32,8 +32,8 @@ Route::get('item','FrontendController@item')->name('itemname');
 Route::get('about','FrontendController@about')->name('aboutname');
 Route::get('contact','FrontendController@contact')->name('contactname');
 Route::get('checkout','FrontendController@checkout')->name('checkoutname');
-Route::get('register','FrontendController@register')->name('registername');
-Route::get('login','FrontendController@login')->name('loginname');
+// Route::get('register','FrontendController@register')->name('registername');
+// Route::get('login','FrontendController@login')->name('loginname');
 Route::get('detail/{id}','FrontendController@detail')->name('detailname');
 Route::get('profile','FrontendController@profile')->name('profilename');
 

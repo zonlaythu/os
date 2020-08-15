@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Brand;
-use App\Category;
+// use App\Category;
 class BrandController extends Controller
 {
     
@@ -27,8 +27,8 @@ class BrandController extends Controller
      */
     public function create()
     {
-        $categories=Category::all();
-        return view('backend.brands.create',compact('categories'));
+        $brands=Brand::all();
+        return view('backend.brands.create',compact('brands'));
         
     }
 
@@ -109,7 +109,7 @@ class BrandController extends Controller
         // File Uploaded
         if($request->hasFile('photo')){
         $imageName=time().'.'.$request->photo->extension();
-        $request->photo->move(public_path('backend/brandimg'),$imageName);
+        $request->photo->move(public_path('backend/brandimg/'),$imageName);
             $myfile='backend/brandimg/'.$imageName; 
 
             $old=$request->oldphoto;
