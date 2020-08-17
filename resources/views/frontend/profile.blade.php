@@ -10,10 +10,10 @@
 				<div class="row">
 					<div class="offset-md-2 col-md-8">
 						<h2 class="text-center">Your Profile</h2>
-						Name:{{Auth::user()->name}};<br>
-						Email:{{Auth::user()->email}};</br>
-						Phone:{{Auth::user()->phone}};<br>
-						{{-- <form method="" action="" enctype="multipart/form-data">
+						{{-- Name:;<br> --}}
+						{{-- Email:;</br>
+						Phone:;<br> --}}
+						<form method="" action="" enctype="multipart/form-data">
 
 							<div class=form-group>
 								<label>Photo</label>
@@ -23,28 +23,28 @@
 
 							<div class=form-group>
 								<label>Name</label>
-								<input type="text" name="" value="" class="form-control">
+								<input type="text" name="" value="{{Auth::user()->name}}" class="form-control">
 							</div>
 
 
 							<div class=form-group>
 								<label>Email</label>
-								<input type="email" name="" value="" class="form-control">
+								<input type="email" name="" value="{{Auth::user()->email}}" class="form-control" readonly>
 							</div>
 
-							<div class=form-group>
-								<label>Phone</label>
-								<input type="number" name="" value="" class="form-control">
+							{{-- <div class=form-group>
+								<label>Password</label>
+								<input type="number" name="" value="{{Auth::user()->phone}}" class="form-control">
 							</div>
 
 							<div class="form-group">
 								<label>Address</label>
 								<textarea class="form-control"></textarea>
-							</div>
+							</div> --}}
 							<div>
-								<a href="" class="btn btn-primary" type="submit">Save</a>
+								<a href="{{route('homepage')}}" class="btn btn-primary" type="submit">Save</a>
 							</div>
-						</form> --}}
+						</form>
 					</div>
 				</div>
 			</div>

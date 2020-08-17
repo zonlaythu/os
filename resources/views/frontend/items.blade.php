@@ -39,7 +39,7 @@
 					var url='/itemdetail/'+v.id;
 
 					html+=`<div class="col-lg-4 col-md-6 mb-4">
-					<div class="card h-100">
+					<div class="card">
 					<a href="#"><img class="card-img-top" src="${v.photo}" alt=""></a>
 					<div class="card-body">
 					<h4 class="card-title">

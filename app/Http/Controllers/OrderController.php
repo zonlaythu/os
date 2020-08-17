@@ -3,13 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Order;
 use Illuminate\Support\Facades\Auth;
+use App\Order;
+use App\Item;
+
 class OrderController extends Controller
 {
 
     public function __construct(){
-        $this->middleware('role:customer'),['only'=>['store']]);
+
+        $this->middleware('role:customer',['only'=>['store']]);
         
     }
     /**
@@ -75,7 +78,9 @@ class OrderController extends Controller
      */
     public function show($id)
     {
-        
+       
+       $orders=Order::find($id);
+       return view('backend.orders.orderdetail',compact('orders'));
     }
 
     /**
@@ -109,6 +114,9 @@ class OrderController extends Controller
      */
     public function destroy($id)
     {
-        //
+    $order=Order::find($id);
+     $order->delete();
+    return redirect()->route('orders.index'); 
+
     }
 }
