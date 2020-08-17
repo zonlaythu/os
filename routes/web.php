@@ -14,16 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 // BackendController
 // --------------
-Route::middleware('auth')->group(function(){
+Route::middleware('role:admin')->group(function(){
 Route::get('dashboard', 'BackendController@dashboard')->name('dashboard');
 Route::resource('items', 'ItemController');
 Route::resource('brands', 'BrandController');
 Route::resource('categories','CategoryController');
 Route::resource('subcategories','SubcategoryController');
-Route::resource('orders', 'OrderController');
 // get-4/post-1/put-1/delet-1
 });
-
+Route::resource('orders', 'OrderController');
 // Frontend
 // ---------
 Route::get('/','FrontendController@home')->name('homepage');
@@ -36,6 +35,7 @@ Route::get('checkout','FrontendController@checkout')->name('checkoutname');
 // Route::get('login','FrontendController@login')->name('loginname');
 Route::get('detail/{id}','FrontendController@detail')->name('detailname');
 Route::get('profile','FrontendController@profile')->name('profilename');
+Route::post('/getitems','FrontendController@getItems')->name('getItems');
 
 
 Auth::routes();

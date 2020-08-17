@@ -220,11 +220,11 @@ $(".buy_now").on('click',function(){
 		// var shopArray=JSON.parse(shopString);
 		$.post('/orders',{shop_data:shopString,notes:notes},function(response){
 			if(response) {
-			// alert(response);
+			console.log(response);
 
 				localStorage.clear();
 				getData();
-				location.href="/";
+	
 			}
 		})
 	}

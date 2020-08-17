@@ -10,7 +10,10 @@
 				<div class="row">
 					<div class="offset-md-2 col-md-8">
 						<h2 class="text-center">Your Profile</h2>
-						<form method="" action="" enctype="multipart/form-data">
+						Name:{{Auth::user()->name}};<br>
+						Email:{{Auth::user()->email}};</br>
+						Phone:{{Auth::user()->phone}};<br>
+						{{-- <form method="" action="" enctype="multipart/form-data">
 
 							<div class=form-group>
 								<label>Photo</label>
@@ -41,7 +44,7 @@
 							<div>
 								<a href="" class="btn btn-primary" type="submit">Save</a>
 							</div>
-						</form>
+						</form> --}}
 					</div>
 				</div>
 			</div>
